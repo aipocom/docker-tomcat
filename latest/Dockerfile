@@ -1,7 +1,5 @@
 FROM alpine:3.4
 
-MAINTAINER nbeppu@gmail.com
-
 ENV TOMCAT_MAJOR=7 \
     TOMCAT_VERSION=7.0.70 \
     TOMCAT_HOME=/opt/tomcat \
