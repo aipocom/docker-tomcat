@@ -1,7 +1,7 @@
 FROM alpine:3.4
 
 ENV TOMCAT_MAJOR=7 \
-    TOMCAT_VERSION=7.0.70 \
+    TOMCAT_VERSION=7.0.91 \
     TOMCAT_HOME=/opt/tomcat \
     CATALINA_HOME=/opt/tomcat \
     CATALINA_OUT=/dev/null \
