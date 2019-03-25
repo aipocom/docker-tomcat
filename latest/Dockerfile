@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:3.9
 
 ENV TOMCAT_MAJOR=7 \
     TOMCAT_VERSION=7.0.91 \
@@ -10,7 +10,7 @@ ENV TOMCAT_MAJOR=7 \
 
 RUN mkdir -p /opt && \
     apk upgrade --update && \
-    apk add --update openjdk8-jre curl tzdata && \
+    apk add --no-cache nss --update openjdk8-jre curl tzdata && \
     cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime && \
     curl -jksSL -o /tmp/apache-tomcat.tar.gz http://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR}/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz && \
     tar -C /opt -xvzf /tmp/apache-tomcat.tar.gz && \
